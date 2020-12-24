@@ -1,4 +1,4 @@
-// Button variants adjusted to match Shards' design system
+// Button variants adjusted to match Joy UI's design system
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
@@ -27,7 +27,7 @@
       box-shadow: 0 0 0 3px rgba($background, .5);
     }
   }
-  
+
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {

@@ -1,4 +1,4 @@
-// Shards variables
+// Joy UI variables
 
 //
 // Color system
@@ -35,13 +35,13 @@ $indigo:  #674eec !default;
 $purple:  #8445f7 !default;
 $pink:    #ff4169 !default;
 $red:     #c4183c !default;
-$orange:  #fb7906 !default;
+$orange:  #fe5800 !default;
 $yellow:  #ffb400 !default;
 $green:   #17c671 !default;
 $teal:    #1adba2 !default;
 $cyan:    #00b8d8 !default;
 
-// Shards Specific
+// Joy UI Specific
 $blueish-grey: #5A6169 !default;
 
 $colors: () !default;
@@ -61,7 +61,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
+$primary:       $orange !default;
 $secondary:     $blueish-grey !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -99,7 +99,7 @@ $yiq-text-light: $white !default;
 
 $enable-rounded:            true !default;
 $enable-shadows:            true !default;
-$enable-gradients:          false !default; // Not supported by Shards.
+$enable-gradients:          false !default; // Not supported by Joy UI.
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
 $enable-fonts-import:       true !default;
@@ -164,7 +164,7 @@ $line-height-sm:         1.5 !default;
 
 $border-width: 1px !default;
 
-$border-radius:          .375rem !default;
+$border-radius:          .25rem !default;
 $border-radius-lg:       .5rem !default;
 $border-radius-sm:       .35rem !default;
 
@@ -185,9 +185,9 @@ $transition-collapse:     height 350ms ease-in-out !default;
 
 // Fonts
 
-$google-fonts-import: 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600|Roboto+Mono' !default; // Includes: Poppins: Light, Regular, Medium, Semi-bold; Roboto Mono: Regular
+$google-fonts-import: 'https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i|Roboto+Mono&display=swap&subset=latin-ext,vietnamese';
 
-$font-family-poppins-first: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-nunito-first: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-system-first: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-roboto-mono-first: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
@@ -214,7 +214,7 @@ $h6-font-size: 1rem !default;
 
 $headings-margin-bottom: .75rem !default;
 
-$headings-font-family:   $font-family-poppins-first !default;
+$headings-font-family:   $font-family-nunito-first !default;
 $headings-font-weight:   400 !default;
 $headings-color:         $gray-900 !default;
 $headings-letter-spacing: -.0625rem !default; // ~1px
@@ -307,7 +307,7 @@ $btn-font-weight:                 $font-weight-normal !default;
 $btn-font-size:                   .875rem !default;
 $btn-font-size-sm:                0.75rem !default;
 $btn-font-size-lg:                1.125rem !default;
-$btn-font-family:                 $font-family-poppins-first !default;
+$btn-font-family:                 $font-family-nunito-first !default;
 $btn-box-shadow:                  none !default;
 
 $input-btn-focus-width:           .2rem !default;
@@ -579,7 +579,7 @@ $zindex-tooltip:            1070 !default;
 // Navs
 
 $nav-transition:                 $transition-base !default;
-$nav-font-family:                $font-family-poppins-first !default;
+$nav-font-family:                $font-family-nunito-first !default;
 
 $nav-link-padding-y:            .625rem !default;
 $nav-link-padding-x:            1.125rem !default;
@@ -612,7 +612,7 @@ $nav-link-height:                   $navbar-brand-font-size * $line-height-base 
 $navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 $navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 2 !default;
 
-$navbar-font-family:                $font-family-poppins-first !default;
+$navbar-font-family:                $font-family-nunito-first !default;
 $navbar-toggler-padding-y:           .5rem !default;
 $navbar-toggler-padding-x:           .5rem !default;
 $navbar-toggler-font-size:           1rem !default;
@@ -641,7 +641,7 @@ $pagination-padding-x-sm:             .6875rem !default;
 $pagination-padding-y-lg:             .9375rem !default;
 $pagination-padding-x-lg:             1.5625rem !default;
 $pagination-line-height:              1.25 !default;
-$pagination-font-family:              $font-family-poppins-first !default;
+$pagination-font-family:              $font-family-nunito-first !default;
 $pagination-font-size:                .875rem !default;
 $pagination-box-shadow:               0 .125rem .9375rem rgba($blueish-grey, 0.1), 0 .125rem .1875rem rgba($blueish-grey, 0.15) !default;
 
@@ -689,7 +689,7 @@ $card-bg:                       $white !default;
 $card-title-font-weight:        500 !default;
 $card-title-margin-bottom:      .75rem !default;
 
-$card-link-font-family:         $font-family-poppins-first !default;
+$card-link-font-family:         $font-family-nunito-first !default;
 
 $card-paragraph-margin-bottom:  1.5625rem !default;
 
