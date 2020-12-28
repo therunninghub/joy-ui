@@ -17,6 +17,7 @@
     "css-minify:extras": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/joy-extras.min.css dist/css/joy-extras.css",
     "css-minify:main": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/joy.min.css dist/css/joy.css",
     "css-prefix": "postcss --config build/postcss.config.js --replace dist/css/*.css",
+    "dev": "npm-run-all --parallel watch serve-dist",
     "dist": "npm-run-all --parallel css copy-html copy-images",
     "serve-dist": "browser-sync start --server \"./dist\" --files \".\" --no-open --no-online --no-notify",
     "watch": "npm-run-all --parallel watch-css watch-html watch-images",
