@@ -195,11 +195,11 @@
       // Handle rounded corners
       @if $enable-rounded {
         &:first-child {
-          @include border-right-radius(0);
+          @include border-end-radius(0);
         }
 
         &:last-child {
-          @include border-left-radius(0);
+          @include border-start-radius(0);
         }
 
         &:only-child {
