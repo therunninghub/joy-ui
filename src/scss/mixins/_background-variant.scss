@@ -24,7 +24,8 @@
 
   }
   a#{$parent} {
-    @include hover-focus {
+    &:hover,
+    &:focus {
       background-color: darken($color, 10%) !important;
     }
   }

@@ -31,7 +31,7 @@ a {
   color: $link-color;
   text-decoration: $link-decoration;
 
-  @include hover {
+  &:hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }

@@ -19,7 +19,8 @@
   @include transition($list-group-transition);
 
   // Hover state
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: $list-group-action-hover-color;
     background-color: $list-group-hover-bg;
   }

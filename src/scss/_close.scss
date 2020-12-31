@@ -7,7 +7,8 @@
   text-shadow: $close-text-shadow;
   @include transition($transition-base);
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: $close-color;
   }
 }

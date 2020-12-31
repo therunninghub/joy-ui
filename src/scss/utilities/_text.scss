@@ -17,7 +17,8 @@
 
 // Anchor white text hover adjustment
 a.text-white {
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: darken($white, 10%) !important;
   }
 }
@@ -29,7 +30,8 @@ a.text-white {
 
 // Anchor black text hover adjustment
 a.text-black {
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: darken($black, 10%) !important;
   }
 }

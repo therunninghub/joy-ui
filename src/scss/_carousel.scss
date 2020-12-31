@@ -16,7 +16,8 @@
   opacity: $carousel-control-opacity;
 
   // Hover/focus state
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: $carousel-control-color;
   }
 }

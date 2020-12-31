@@ -57,7 +57,8 @@
   font-size: $dropdown-item-font-size;
   transition: $dropdown-item-transition;
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: $dropdown-link-hover-color;
     @include gradient-bg($dropdown-link-hover-bg);
   }
