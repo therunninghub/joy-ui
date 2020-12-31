@@ -51,7 +51,7 @@
 @mixin button-outline-variant( $color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   $button-text-color: $color; // Fix light or white outlined buttons
 
-  @if ($color==theme-color("light") or $color==$white) {
+  @if ($color==map-get($theme-colors, "light") or $color==$white) {
     $button-text-color: color-yiq($color);
   }
 

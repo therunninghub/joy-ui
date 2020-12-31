@@ -123,7 +123,7 @@ $body-color:    $blueish-grey !default;
 
 // Links
 
-$link-color:            theme-color("primary") !default;
+$link-color:            map-get($theme-colors, "primary") !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
@@ -169,7 +169,7 @@ $border-radius-lg:       .5rem !default;
 $border-radius-sm:       .35rem !default;
 
 $component-active-color: $white !default;
-$component-active-bg:    theme-color("primary") !default;
+$component-active-bg:    map-get($theme-colors, "primary") !default;
 
 
 // Easings
@@ -357,8 +357,8 @@ $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
 $input-focus-bg:                 $input-bg !default;
-$input-focus-border-color:       theme-color("primary") !default;
-$input-focus-box-shadow:         0 .313rem .719rem rgba(theme-color("primary"),.1), 0 .156rem .125rem rgba($black, .06) !default;
+$input-focus-border-color:       map-get($theme-colors, "primary") !default;
+$input-focus-box-shadow:         0 .313rem .719rem rgba(map-get($theme-colors, "primary"),.1), 0 .156rem .125rem rgba($black, .06) !default;
 $input-focus-color:              $input-color !default;
 
 $input-hover-border-color:      darken($input-border-color, 15) !default;
@@ -411,19 +411,19 @@ $custom-control-indicator-disabled-bg:       $gray-200 !default;
 $custom-control-description-disabled-color:  $gray-600 !default;
 
 $custom-control-indicator-checked-color:      $white !default;
-$custom-control-indicator-checked-bg:         theme-color("primary") !default;
+$custom-control-indicator-checked-bg:         map-get($theme-colors, "primary") !default;
 $custom-control-indicator-checked-box-shadow: none !default;
 
 $custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default;
 
 $custom-control-indicator-active-color:      $white !default;
-$custom-control-indicator-active-bg:         lighten(theme-color("primary"), 35%) !default;
+$custom-control-indicator-active-bg:         lighten(map-get($theme-colors, "primary"), 35%) !default;
 $custom-control-indicator-active-box-shadow: none !default;
 
 // Custom checkbox
 $custom-checkbox-indicator-border-radius: 2px !default;
 $custom-checkbox-indicator-icon-checked: none !default;
-$custom-checkbox-indicator-indeterminate-bg: theme-color("primary") !default;
+$custom-checkbox-indicator-indeterminate-bg: map-get($theme-colors, "primary") !default;
 $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default;
 $custom-checkbox-indicator-icon-indeterminate: none !default;
 $custom-checkbox-indicator-indeterminate-box-shadow: none !default;
@@ -449,7 +449,7 @@ $custom-select-border-color:  $input-border-color !default;
 $custom-select-border-radius: $border-radius !default;
 
 $custom-select-focus-border-color:       $input-focus-border-color !default;
-$custom-select-focus-box-shadow:         0 .313rem .719rem rgba(theme-color("primary"),.1), 0 .156rem .125rem rgba($black, .06) !default;
+$custom-select-focus-box-shadow:         0 .313rem .719rem rgba(map-get($theme-colors, "primary"),.1), 0 .156rem .125rem rgba($black, .06) !default;
 
 $custom-select-font-size-sm:  0.75rem !default;
 $custom-select-height-sm: $input-height-sm !default;
@@ -483,8 +483,8 @@ $custom-switch-padding-left: 2.25rem !default;
 // Form validation
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
-$form-feedback-valid-color:         theme-color("success") !default;
-$form-feedback-invalid-color:       theme-color("danger") !default;
+$form-feedback-valid-color:         map-get($theme-colors, "success") !default;
+$form-feedback-invalid-color:       map-get($theme-colors, "danger") !default;
 
 // Custom toggle
 $custom-toggle-width: 3.125rem !default;
@@ -494,9 +494,9 @@ $custom-toggle-border: $custom-toggle-border-width solid $input-border-color !de
 $custom-toggle-background-color: $white !default;
 $custom-toggle-border-radius: 100px !default;
 
-$custom-toggle-focus-box-shadow: 0 .313rem .719rem rgba(theme-color("success"),.1), 0 .156rem .125rem rgba($black, .06) !default;
+$custom-toggle-focus-box-shadow: 0 .313rem .719rem rgba(map-get($theme-colors, "success"),.1), 0 .156rem .125rem rgba($black, .06) !default;
 
-$custom-toggle-checked-background: theme-color("success") !default;
+$custom-toggle-checked-background: map-get($theme-colors, "success") !default;
 $custom-toggle-checked-border-color: $custom-toggle-checked-background !default;
 $custom-toggle-checked-knob-background: $white !default;
 
@@ -517,8 +517,8 @@ $custom-toggle-knob-height-sm: .75rem !default;
 
 
 // Form validation
-$form-feedback-valid-color:   theme-color("success") !default;
-$form-feedback-invalid-color: theme-color("danger") !default;
+$form-feedback-valid-color:   map-get($theme-colors, "success") !default;
+$form-feedback-invalid-color: map-get($theme-colors, "danger") !default;
 
 
 // Dropdowns
@@ -654,8 +654,8 @@ $pagination-hover-bg:                  lighten($blueish-grey, 58%) !default;
 $pagination-hover-border-color:        lighten($blueish-grey, 50%) !default;
 
 $pagination-active-color:              $white !default;
-$pagination-active-bg:                 theme-color("primary") !default;
-$pagination-active-border-color:       theme-color("primary") !default;
+$pagination-active-bg:                 map-get($theme-colors, "primary") !default;
+$pagination-active-border-color:       map-get($theme-colors, "primary") !default;
 
 $pagination-disabled-color:            lighten($blueish-grey, 30%) !default;
 $pagination-disabled-bg:               $white !default;
@@ -824,7 +824,7 @@ $progress-bg:                   lighten($blueish-grey, 58%) !default;
 $progress-border-radius:        1.25rem !default;
 $progress-box-shadow:           inset 0 .1rem .1rem rgba($blueish-grey, .15) !default;
 $progress-bar-color:            $white !default;
-$progress-bar-bg:               theme-color("primary") !default;
+$progress-bar-bg:               map-get($theme-colors, "primary") !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 $progress-bar-transition:       width .6s ease !default;
 $progress-label-font-size:      .8125rem !default;
@@ -930,7 +930,7 @@ $slider-base-border-radius:       5px !default;
 $slider-base-background:          lighten($blueish-grey, 55%) !default;
 $slider-base-margin-top:          35px !default;
 
-$slider-connect-color:            theme-color("primary") !default;
+$slider-connect-color:            map-get($theme-colors, "primary") !default;
 $slider-pips-color:               lighten($blueish-grey, 30%) !default;
 
 $slider-tooltip-padding:          5px 10px !default;
@@ -953,7 +953,7 @@ $slider-handle-height:            23px !default;
 $slider-handle-box-shadow:        0 3px 15px rgba($blueish-grey, 0.1),
                                   0 2px 3px rgba($blueish-grey, 0.2) !default;
 
-$slider-handle-focus-box-shadow:  0 0 8px rgba(theme-color("primary"), .65),
+$slider-handle-focus-box-shadow:  0 0 8px rgba(map-get($theme-colors, "primary"), .65),
                                   0 3px 15px rgba($blueish-grey, 0.1),
                                   0 2px 3px rgba($blueish-grey, 0.2) !default;
 
@@ -975,9 +975,9 @@ $datepicker-disabled-old-new-color: lighten($blueish-grey, 40%) !default;
 $datepicker-header-cell-border-radius: $border-radius !default;
 
 $datepicker-active-color: $white !default;
-$datepicker-active-background: theme-color("primary") !default;
+$datepicker-active-background: map-get($theme-colors, "primary") !default;
 
-$datepicker-range-background: theme-color("primary") !default;
+$datepicker-range-background: map-get($theme-colors, "primary") !default;
 $datepicker-range-cell-focused-background: darken($datepicker-range-background, 5%) !default;
 $datepicker-range-color: $white !default;
 $datepicker-range-highlighted-bg: $gray-200 !default;

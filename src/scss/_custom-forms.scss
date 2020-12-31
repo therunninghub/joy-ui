@@ -237,7 +237,7 @@
 
     &::after {
       border-color: $custom-file-focus-border-color;
-      color: theme-color("primary");
+      color: map-get($theme-colors, "primary");
       background: lighten($custom-file-focus-border-color, 45);
     }
 

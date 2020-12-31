@@ -18,7 +18,7 @@
       right: 0;
       bottom: 0;
       opacity: .8;
-      background: theme-color("primary");
+      background: map-get($theme-colors, "primary");
     }
 
     @include media-breakpoint-down(sm) {
@@ -42,7 +42,7 @@
       content: '';
       width: 30px;
       height: 2px;
-      background: theme-color("primary");
+      background: map-get($theme-colors, "primary");
       position: absolute;
       left: 50%;
       margin-left: -15px;

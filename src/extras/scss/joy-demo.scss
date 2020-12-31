@@ -33,7 +33,7 @@ body {
   margin-top: -20px;
   margin-left: -20px;
   background-color: #333;
-  background: theme-color("primary");
+  background: map-get($theme-colors, "primary");
   border-radius: 100%;
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-animation: pulse-load 1200ms infinite ease-in-out;

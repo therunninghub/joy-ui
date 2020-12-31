@@ -19,7 +19,7 @@
           right: 0;
           bottom: 0;
           opacity: .9;
-          background: theme-color("dark");
+          background: map-get($theme-colors, "dark");
         }
 
         // Responsive adjustments.
@@ -55,7 +55,7 @@
           content: '';
           width: 30px;
           height: 2px;
-          background: theme-color("success");
+          background: map-get($theme-colors, "success");
           position: absolute;
           left: 50%;
           margin-left: -15px;
@@ -83,7 +83,7 @@
           left: 0;
           bottom: 0;
           right: 0;
-          background: theme-color("light");
+          background: map-get($theme-colors, "light");
           opacity: .6;
         }
 
