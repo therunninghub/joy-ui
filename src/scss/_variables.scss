@@ -980,7 +980,7 @@ $datepicker-active-background: map-get($theme-colors, "primary") !default;
 $datepicker-active-background: theme-color("primary") !default;
 
 $datepicker-range-background: theme-color("primary") !default;
-$datepicker-range-cell-focused-background: darken($datepicker-range-background, 5%) !default;
+$datepicker-range-cell-focused-background: shade-color($datepicker-range-background, 5%) !default;
 $datepicker-range-color: $white !default;
 $datepicker-range-highlighted-bg: $gray-200 !default;
 
