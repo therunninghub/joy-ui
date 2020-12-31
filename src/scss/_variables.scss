@@ -923,41 +923,6 @@ $nested-kbd-font-weight:      $font-weight-bold !default;
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
 
-// Slider control (nouislider)
-$slider-base-size:                5px !default;
-$slider-base-box-shadow:          inset 0 1px 2px rgba($blueish-grey,.1) !default;
-$slider-base-border-radius:       5px !default;
-$slider-base-background:          lighten($blueish-grey, 55%) !default;
-$slider-base-margin-top:          35px !default;
-
-$slider-connect-color:            map-get($theme-colors, "primary") !default;
-$slider-pips-color:               lighten($blueish-grey, 30%) !default;
-
-$slider-tooltip-padding:          5px 10px !default;
-$slider-tooltip-font-size:        .75rem !default;
-$slider-tooltip-background:       $white !default;
-$slider-tooltip-border-radius:    $border-radius !default;
-$slider-tooltip-color:            $blueish-grey !default;
-$slider-tooltip-border-radius:    5px !default;
-$slider-tooltip-box-shadow:       0 3px 15px rgba($blueish-grey, 0.1),
-                                  0 2px 3px rgba($blueish-grey, 0.2);
-
-$slider-handle-transition:        $transition-base !default;
-$slider-handle-border:            1px solid lighten($blueish-grey, 53%) !default;
-$slider-handle-background:        $white !default;
-$slider-handle-disabled-background: lighten($blueish-grey, 57%) !default;
-$slider-handle-border-radius:     50% !default;
-$slider-handle-width:             23px !default;
-$slider-handle-height:            23px !default;
-
-$slider-handle-box-shadow:        0 3px 15px rgba($blueish-grey, 0.1),
-                                  0 2px 3px rgba($blueish-grey, 0.2) !default;
-
-$slider-handle-focus-box-shadow:  0 0 8px rgba(map-get($theme-colors, "primary"), .65),
-                                  0 3px 15px rgba($blueish-grey, 0.1),
-                                  0 2px 3px rgba($blueish-grey, 0.2) !default;
-
-
 // Datepicker
 
 $datepicker-border-radius: $card-border-radius !default;
