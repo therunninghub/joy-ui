@@ -19,7 +19,7 @@
 a.text-white {
   &:hover,
   &:focus {
-    color: darken($white, 10%) !important;
+    color: shade-color($white, 10%) !important;
   }
 }
 
@@ -32,7 +32,7 @@ a.text-white {
 a.text-black {
   &:hover,
   &:focus {
-    color: darken($black, 10%) !important;
+    color: shade-color($black, 10%) !important;
   }
 }
 

@@ -125,7 +125,7 @@ $body-color:    $blueish-grey !default;
 
 $link-color:            map-get($theme-colors, "primary") !default;
 $link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      shade-color($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 
@@ -361,7 +361,7 @@ $input-focus-border-color:       map-get($theme-colors, "primary") !default;
 $input-focus-box-shadow:         0 .313rem .719rem rgba(map-get($theme-colors, "primary"),.1), 0 .156rem .125rem rgba($black, .06) !default;
 $input-focus-color:              $input-color !default;
 
-$input-hover-border-color:      darken($input-border-color, 15) !default;
+$input-hover-border-color:      shade-color($input-border-color, 15) !default;
 
 $input-placeholder-color:        $gray-600 !default;
 
@@ -537,7 +537,7 @@ $dropdown-border-radius:         $border-radius !default;
 $dropdown-box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.11), 0 10px 20px rgba(0, 0, 0, 0.05), 0 2px 3px rgba(0, 0, 0, 0.06) !default;
 
 $dropdown-link-color:            $gray-900 !default;
-$dropdown-link-hover-color:      darken($gray-900, 5%) !default;
+$dropdown-link-hover-color:      shade-color($gray-900, 5%) !default;
 $dropdown-link-hover-bg:         lighten($blueish-grey, 55%) !default;
 $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        lighten($blueish-grey, 40%) !default;
@@ -977,7 +977,9 @@ $datepicker-header-cell-border-radius: $border-radius !default;
 $datepicker-active-color: $white !default;
 $datepicker-active-background: map-get($theme-colors, "primary") !default;
 
-$datepicker-range-background: map-get($theme-colors, "primary") !default;
+$datepicker-active-background: theme-color("primary") !default;
+
+$datepicker-range-background: theme-color("primary") !default;
 $datepicker-range-cell-focused-background: darken($datepicker-range-background, 5%) !default;
 $datepicker-range-color: $white !default;
 $datepicker-range-highlighted-bg: $gray-200 !default;

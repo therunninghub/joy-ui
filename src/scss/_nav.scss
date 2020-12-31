@@ -117,7 +117,7 @@
       // Active pills
       &.active {
         background-color: $value;
-        border-color: darken($value, 3%);
+        border-color: shade-color($value, 3%);
         color: color-yiq($value);
       }
 

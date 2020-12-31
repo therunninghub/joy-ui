@@ -9,7 +9,7 @@
   a#{$parent} {
     &:hover,
     &:focus {
-      color: darken($color, 10%) !important;
+      color: shade-color($color, 10%) !important;
     }
   }
 }

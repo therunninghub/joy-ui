@@ -6,7 +6,7 @@
     @include hover-focus {
       color: color-yiq($bg);
       text-decoration: none;
-      background-color: darken($bg, 10%);
+      background-color: shade-color($bg, 10%);
     }
   }
 }

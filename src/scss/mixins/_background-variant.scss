@@ -12,13 +12,13 @@
       .card-body,
       .card-header,
       .card-footer {
-        background-color: darken($color, 10%) !important;
+        background-color: shade-color($color, 10%) !important;
       }
 
       // Adjust card header background.
       .card-header,
       .card-footer {
-        background: darken($color, 3%);
+        background: shade-color($color, 3%);
       }
     }
 
@@ -26,7 +26,7 @@
   a#{$parent} {
     &:hover,
     &:focus {
-      background-color: darken($color, 10%) !important;
+      background-color: shade-color($color, 10%) !important;
     }
   }
 }
