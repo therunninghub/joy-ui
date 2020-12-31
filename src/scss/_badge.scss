@@ -43,7 +43,7 @@ a.badge {
 
     // Fix light outlined badges
     @if ( $value == map-get($theme-colors, "light") ) {
-      color: color-yiq($value);
+      color: color-constract($value);
     }
   }
 }

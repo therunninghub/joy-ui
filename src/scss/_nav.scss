@@ -118,7 +118,7 @@
       &.active {
         background-color: $value;
         border-color: shade-color($value, 3%);
-        color: color-yiq($value);
+        color: color-constract($value);
       }
 
       &.disabled {
