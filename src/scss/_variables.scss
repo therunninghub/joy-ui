@@ -922,33 +922,3 @@ $nested-kbd-font-weight:      $font-weight-bold !default;
 
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
-
-// Datepicker
-
-$datepicker-border-radius: $card-border-radius !default;
-$datepicker-dropdown-padding: 20px 22px !default;
-
-$datepicker-cell-transition: $transition-base !default;
-$datepicker-cell-hover-background: lighten($blueish-grey, 55%) !default;
-$datepicker-cell-border-radius: 50% !default;
-$datepicker-cell-width: 36px !default;
-$datepicker-cell-height: 36px !default;
-
-$datepicker-disabled-cell-color: lighten($blueish-grey, 53%) !default;
-$datepicker-disabled-old-new-color: lighten($blueish-grey, 40%) !default;
-
-$datepicker-header-cell-border-radius: $border-radius !default;
-
-$datepicker-active-color: $white !default;
-$datepicker-active-background: map-get($theme-colors, "primary") !default;
-
-$datepicker-active-background: theme-color("primary") !default;
-
-$datepicker-range-background: theme-color("primary") !default;
-$datepicker-range-cell-focused-background: shade-color($datepicker-range-background, 5%) !default;
-$datepicker-range-color: $white !default;
-$datepicker-range-highlighted-bg: $gray-200 !default;
-
-$datepicker-dropdown-border: lighten($blueish-grey, 40%) !default;
-$datepicker-dropdown-bg: $white !default;
-$datepicker-highlighted-bg: $datepicker-active-background !default;
