@@ -7,6 +7,10 @@
 @import "../../scss/mixins";
 @import '../../scss/variables';
 
+body {
+  font-family: var(--font-family-theme);
+}
+
 // Page loader
 .loader {
   position: fixed;
