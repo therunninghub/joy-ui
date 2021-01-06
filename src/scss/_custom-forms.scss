@@ -10,8 +10,11 @@
     cursor: pointer;
   }
 
-  .custom-control-label:before {
+  .custom-control-label::before {
     pointer-events: all;
+  }
+  .custom-control-label::after {
+    content: none;
   }
 }
 
@@ -20,6 +23,7 @@
 }
 
 .custom-control-input {
+  display: none;
   &:checked ~ .custom-control-label::before {
     color: $custom-control-indicator-checked-color;
     border-color: transparent;
@@ -76,14 +80,6 @@
     transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
     @include box-shadow($custom-control-indicator-box-shadow);
   }
-
-  // Foreground (icon)
-  &::after {
-    top: (($line-height-base - $custom-control-indicator-size) / 2);
-    width: $custom-control-indicator-size;
-    height: $custom-control-indicator-size;
-    background-size: $custom-control-indicator-bg-size;
-  }
 }
 
 // Custom Switches (core)
@@ -107,30 +103,10 @@
     @include border-radius($custom-checkbox-indicator-border-radius);
   }
 
-  .custom-control-label::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 7px;
-    width: 5px;
-    height: 11px;
-    opacity: 0;
-    transform: rotate(45deg) scale(0);
-    border-right: 2px solid $white;
-    border-bottom: 2px solid $white;
-    transition: $custom-checkbox-indicator-transition;
-    transition-delay: 100ms;
-  }
-
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
-      background-image: none;
-    }
-
-    &::after {
-      opacity: 1;
-      transform: rotate(45deg) scale(1);
-      background-image: $custom-checkbox-indicator-icon-checked;
+      // https://icons.getbootstrap.com/icons/check/
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M10.97%204.97a.75.75%200%200%201%201.07%201.05l-3.99%204.99a.75.75%200%200%201-1.08.02L4.324%208.384a.75.75%200%201%201%201.06-1.06l2.094%202.093%203.473-4.425a.267.267%200%200%201%20.02-.022z%22%2F%3E%3C%2Fsvg%3E");
     }
   }
 
@@ -139,21 +115,6 @@
       border: none;
       @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      transform: scale(1);
-      background-image: $custom-checkbox-indicator-icon-indeterminate;
-      background-color: $white;
-      border: none;
-      width: 10px;
-      height: 2px;
-      top: 11px;
-      left: 4px;
-      opacity: 1;
-      transition: none;
     }
   }
 
@@ -178,47 +139,10 @@
     border-radius: $custom-radio-indicator-border-radius;
   }
 
-  .custom-control-label::after {
-    content: '';
-    border-radius: 50%;
-    transform: scale(0);
-    background-image: none !important;
-    position: absolute;
-    background: #fff;
-    width: 8px;
-    height: 8px;
-    top: 8px;
-    left: 5px;
-    transition: all 250ms cubic-bezier(.27,.01,.38,1.06);
-    transition-delay: .1s;
-    opacity: 0;
-    transform: scale(0);
-  }
-
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
       @include gradient-bg($custom-control-indicator-checked-bg);
-    }
-    &::after {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .custom-control-input:disabled {
-    &:checked ~ .custom-control-label::before {
-      background-color: lighten($blueish-grey, 30%);
-    }
-  }
-
-  .custom-control-input:disabled:checked ~ .custom-control-label {
-    &::before {
-      background: $custom-control-indicator-disabled-bg;
-      border-color: $border-color;
-    }
-
-    &::after {
-      background: $border-color;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22white%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%223%22%2F%3E%3C%2Fsvg%3E");
     }
   }
 }

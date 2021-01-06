@@ -1831,12 +1831,20 @@ i.material-icons {
   cursor: pointer;
 }
 
-.custom-control .custom-control-label:before {
+.custom-control .custom-control-label::before {
   pointer-events: all;
+}
+
+.custom-control .custom-control-label::after {
+  content: none;
 }
 
 .custom-control-inline {
   margin-right: 1rem;
+}
+
+.custom-control-input {
+  display: none;
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
@@ -1887,13 +1895,6 @@ i.material-icons {
   box-shadow: none;
 }
 
-.custom-control-label::after {
-  top: 0.1875rem;
-  width: 1.125rem;
-  height: 1.125rem;
-  background-size: 50% 50%;
-}
-
 .custom-switch {
   padding-left: 2.25rem;
 }
@@ -1906,50 +1907,14 @@ i.material-icons {
   border-radius: 2px;
 }
 
-.custom-checkbox .custom-control-label::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 7px;
-  width: 5px;
-  height: 11px;
-  opacity: 0;
-  transform: rotate(45deg) scale(0);
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transition: transform 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06), border 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06);
-  transition-delay: 100ms;
-}
-
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-image: none;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  opacity: 1;
-  transform: rotate(45deg) scale(1);
-  background-image: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M10.97%204.97a.75.75%200%200%201%201.07%201.05l-3.99%204.99a.75.75%200%200%201-1.08.02L4.324%208.384a.75.75%200%201%201%201.06-1.06l2.094%202.093%203.473-4.425a.267.267%200%200%201%20.02-.022z%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
   border: none;
   background-color: #fe5800;
   box-shadow: none;
-}
-
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
-  content: '';
-  position: absolute;
-  transform: scale(1);
-  background-image: none;
-  background-color: #fff;
-  border: none;
-  width: 10px;
-  height: 2px;
-  top: 11px;
-  left: 4px;
-  opacity: 1;
-  transition: none;
 }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -1965,43 +1930,9 @@ i.material-icons {
   border-radius: 50%;
 }
 
-.custom-radio .custom-control-label::after {
-  content: '';
-  border-radius: 50%;
-  transform: scale(0);
-  background-image: none !important;
-  position: absolute;
-  background: #fff;
-  width: 8px;
-  height: 8px;
-  top: 8px;
-  left: 5px;
-  transition: all 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06);
-  transition-delay: .1s;
-  opacity: 0;
-  transform: scale(0);
-}
-
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #fe5800;
-}
-
-.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: #a8aeb4;
-}
-
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background: #e9ecef;
-  border-color: #becad6;
-}
-
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::after {
-  background: #becad6;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22white%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%223%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .custom-select {
