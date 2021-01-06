@@ -1,7 +1,7 @@
 {
   "name": "@therunninghub/joy-ui",
   "description": "A free, modern and lightweight Bootstrap 4 UI toolkit for web makers.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/css/joy",
   "scripts": {
     "start": "npm-run-all --parallel watch serve-dist",
