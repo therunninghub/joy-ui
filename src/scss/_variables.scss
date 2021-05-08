@@ -11,7 +11,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -30,16 +30,16 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #007bff !default;
-$indigo:  #674eec !default;
-$purple:  #8445f7 !default;
-$pink:    #ff4169 !default;
-$red:     #c4183c !default;
-$orange:  #fe5800 !default;
-$yellow:  #ffb400 !default;
-$green:   #17c671 !default;
-$teal:    #1adba2 !default;
-$cyan:    #00b8d8 !default;
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
 
 // Joy UI Specific
 $blueish-grey: #5A6169 !default;
@@ -136,7 +136,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1400px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -151,7 +152,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
+  xxl: 1320px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -160,13 +162,14 @@ $container-max-widths: (
 // Components
 
 $line-height-lg:         1.5 !default;
-$line-height-sm:         1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
 
 $border-width: 1px !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .5rem !default;
-$border-radius-sm:       .35rem !default;
+$border-radius:               .25rem !default;
+$border-radius-sm:            .2rem !default;
+$border-radius-lg:            .3rem !default;
 
 $component-active-color: $white !default;
 $component-active-bg:    theme-color("primary") !default;
@@ -199,8 +202,9 @@ $font-size-base: 1rem !default;
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 
-$font-weight-normal: 300 !default;
-$font-weight-bold: 500 !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
@@ -259,10 +263,12 @@ $mark-bg: #fff09e !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-bg:                      transparent !default;
-$table-active-bg:               rgba($black, .075) !default;
+$table-active-bg:               rgba($black, .1) !default;
 
-$table-cell-padding:            .75rem !default;
-$table-cell-padding-sm:         .3rem !default;
+$table-cell-padding-y:        .5rem !default;
+$table-cell-padding-x:        .5rem !default;
+$table-cell-padding-y-sm:     .25rem !default;
+$table-cell-padding-x-sm:     .25rem !default;
 
 $table-dark-color:        $body-bg !default;
 $table-dark-bg:           $gray-900 !default;
@@ -279,38 +285,38 @@ $table-border-color:    $gray-300 !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-y-lg: .75rem !default;
-$btn-padding-x-lg: 1.75rem !default;
+$btn-padding-y-lg: .5rem !default;
+$btn-padding-x-lg: 1rem !default;
 
 $btn-line-height-sm: $line-height-sm !default;
 $btn-line-height-lg: $line-height-lg !default;
 
-$btn-padding-y-sm: .35rem !default;
-$btn-padding-x-sm: 1rem !default;
+$btn-padding-y-sm: .25rem !default;
+$btn-padding-x-sm: 5rem !default;
 
-$input-btn-padding-y:       .5rem !default;
-$input-btn-padding-x:       1rem !default;
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
 $input-btn-line-height:     1.125 !default;
 
-$input-btn-padding-y-sm:    .35rem !default;
-$input-btn-padding-x-sm:    .75rem !default;
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
 
-$input-btn-padding-y-lg:    .75rem !default;
-$input-btn-padding-x-lg:    1rem !default;
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
 
 $btn-pill-border-radius: 50px !default;
 
-$btn-padding-y:       .75rem !default;
-$btn-padding-x:       1.25rem !default;
+$btn-padding-y:       $input-btn-padding-y !default;
+$btn-padding-x:       $input-btn-padding-x !default;
 
 $btn-font-weight:                 $font-weight-normal !default;
-$btn-font-size:                   .875rem !default;
-$btn-font-size-sm:                0.75rem !default;
-$btn-font-size-lg:                1.125rem !default;
+$btn-font-size:                   1rem !default;
+$btn-font-size-sm:                1rem *  .875 !default;
+$btn-font-size-lg:                1rem * 1.25 !default;
 $btn-font-family:                 $font-family-nunito-first !default;
 $btn-box-shadow:                  none !default;
 
-$input-btn-focus-width:           .2rem !default;
+$input-btn-focus-width:           .25rem !default;
 
 $btn-active-box-shadow:           inset 0 3px 5px rgba($black,.125) !default;
 
