@@ -11,10 +11,11 @@
   @include border-radius($popover-border-radius);
   @include box-shadow($popover-box-shadow);
 
-  .arrow {
+  .popover-arrow {
+    position: absolute;
+    display: block;
     width: $popover-arrow-width;
     height: $popover-arrow-height;
-    margin: 0 $border-radius-lg;
 
     &::before {
       border-width: $popover-arrow-outer-width;
@@ -29,45 +30,45 @@
 .bs-popover-top {
   margin-bottom: $popover-arrow-height;
 
-  .arrow {
+  > .popover-arrow {
     bottom: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
   }
 
-  .arrow::before,
-  .arrow::after {
+  .popover-arrow::before,
+  .popover-arrow::after {
     border-width: $popover-arrow-height ($popover-arrow-width / 2) 0;
   }
 
-  .arrow::before {
+  .popover-arrow::before {
     border-top-color: $popover-arrow-outer-color;
   }
 
-  .arrow::after {
+  .popover-arrow::after {
     bottom: $popover-border-width;
     border-top-color: $popover-arrow-color;
   }
 }
 
-.bs-popover-right {
+.bs-popover-end {
   margin-left: $popover-arrow-height;
 
-  .arrow {
+  .popover-arrow {
     left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
     margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
   }
 
-  .arrow::before,
-  .arrow::after {
+  .popover-arrow::before,
+  .popover-arrow::after {
     border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
   }
 
-  .arrow::before {
+  .popover-arrow::before {
     border-right-color: $popover-arrow-outer-color;
   }
 
-  .arrow::after {
+  .popover-arrow::after {
     left: $popover-border-width;
     border-right-color: $popover-arrow-color;
   }
@@ -76,20 +77,20 @@
 .bs-popover-bottom {
   margin-top: $popover-arrow-height;
 
-  .arrow {
+  .popover-arrow {
     top: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
   }
 
-  .arrow::before,
-  .arrow::after {
+  .popover-arrow::before,
+  .popover-arrow::after {
     border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2);
   }
 
-  .arrow::before {
+  .popover-arrow::before {
     border-bottom-color: $popover-arrow-outer-color;
   }
 
-  .arrow::after {
+  .popover-arrow::after {
     top: $popover-border-width;
     border-bottom-color: $popover-arrow-color;
   }
@@ -105,40 +106,40 @@
 .bs-popover-left {
   margin-right: $popover-arrow-height;
 
-  .arrow {
+  .popover-arrow {
     right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
     margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
   }
 
-  .arrow::before,
-  .arrow::after {
+  .popover-arrow::before,
+  .popover-arrow::after {
     border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
   }
 
-  .arrow::before {
+  .popover-arrow::before {
     border-left-color: $popover-arrow-outer-color;
   }
 
-  .arrow::after {
+  .popover-arrow::after {
     right: $popover-border-width;
     border-left-color: $popover-arrow-color;
   }
 }
 
 .bs-popover-auto {
-  &[x-placement^="top"] {
+  &[data-popper-placement^="top"] {
     @extend .bs-popover-top;
   }
-  &[x-placement^="right"] {
-    @extend .bs-popover-right;
+  &[data-popper-placement^="right"] {
+    @extend .bs-popover-end;
   }
-  &[x-placement^="bottom"] {
+  &[data-popper-placement^="bottom"] {
     @extend .bs-popover-bottom;
   }
-  &[x-placement^="left"] {
-    @extend .bs-popover-left;
+  &[data-popper-placement^="left"] {
+    @extend .bs-popover-start;
   }
 }
 
