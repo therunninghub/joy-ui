@@ -1,20 +1,14 @@
 // Forms mixins
 
-// Form control focus state
-@mixin form-control-focus() {
-  &:focus {
-    color: $input-focus-color;
-    background-color: $input-focus-bg;
-    border-color: $input-focus-border-color;
-    
-    @if $enable-shadows {
-      box-shadow: $input-focus-box-shadow;
+@mixin form-validation-state-selector($state) {
+  @if ($state == "valid" or $state == "invalid") {
+    .was-validated #{if(&, "&", "")}:#{$state},
+    #{if(&, "&", "")}.is-#{$state} {
+      @content;
     }
-
-    // Set the border color to the focused state border color
-    // when the input is also hovered.
-    &:hover {
-      border-color: $input-focus-border-color;
+  } @else {
+    #{if(&, "&", "")}.is-#{$state} {
+      @content;
     }
   }
 }
