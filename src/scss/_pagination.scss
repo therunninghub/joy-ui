@@ -29,12 +29,12 @@
   box-shadow: $pagination-box-shadow;
 
   &:first-child {
-    @include border-left-radius($border-radius);
+    @include border-start-radius($border-radius);
     overflow: hidden;
   }
 
   &:last-child {
-    @include border-right-radius($border-radius);
+    @include border-end-radius($border-radius);
     overflow: hidden;
 
     .page-link {

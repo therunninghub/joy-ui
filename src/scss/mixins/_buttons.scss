@@ -120,12 +120,10 @@
     background-color: transparent;
   }
 }
-// scss-docs-end btn-outline-variant-mixin
 
-// scss-docs-start btn-size-mixin
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
   padding: $padding-y $padding-x;
-  @include font-size($font-size);
+  font-size: $font-size;
   // Manually declare to provide an override to the browser default
   @include border-radius($border-radius, 0);
 }
