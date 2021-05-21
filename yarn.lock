@@ -3169,9 +3169,9 @@ normalize-url@^4.1.0:
   integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
 
 nouislider@^15.0.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-15.1.0.tgz#f489d5c110d7e489166734584ce3263d53478c8d"
-  integrity sha512-szBSnk2GsfDmytNFXNIgI4+Hd0VmOOnn4LIdafthIaS0lNFmny8EfyjcqgBoEeouyE+pfDDn0L1qloc2EnjKKA==
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-15.1.1.tgz#f92b9a45fdbf8824c0e1a8621ea21994814e3f86"
+  integrity sha512-xV9nabBSF59Q4vs5yNfnAey8AkEfq2bKM98e8wfg5jJM7IESGIViWHdjRoBsBGyljYenWt6fSJgczwt8ilKpew==
 
 npm-run-all@^4.1.5:
   version "4.1.5"
