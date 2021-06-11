@@ -18,6 +18,8 @@
 
 .progress {
   height: $progress-height;
+  display: flex;
+  overflow: hidden;
   font-size: $progress-font-size;
   line-height: $progress-height;
   background-color: $progress-bg;
@@ -36,9 +38,13 @@
 }
 
 .progress-bar {
-  height: $progress-height;
-  line-height: $progress-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
   color: $progress-bar-color;
+  text-align: center;
+  white-space: nowrap;
   background-color: $progress-bar-bg;
   @include transition($progress-bar-transition);
 }

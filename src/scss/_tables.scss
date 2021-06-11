@@ -4,10 +4,34 @@
 
 .table {
   background-color: $table-bg;
+  width: 100%;
+  margin-bottom: $spacer;
+  color: $table-color;
+  vertical-align: $table-cell-vertical-align;
+  border-color: $table-border-color;
+
+  > :not(caption) > * > * {
+    padding: $table-cell-padding-y $table-cell-padding-x;
+    background-color: var(--#{$table-bg});
+    border-bottom-width: $table-border-width;
+    box-shadow: inset 0 0 0 9999px var(--#{table-accent-bg});
+  }
+
+  > tbody {
+    vertical-align: inherit;
+  }
+
+  > thead {
+    vertical-align: bottom;
+  }
+
+  > :not(:last-child) > :last-child > * {
+    border-bottom-color: $table-group-separator-color;
+  }
 
   th,
   td {
-    padding: $table-cell-padding;
+    padding: $table-cell-padding-y $table-cell-padding-x;
   }
 
   .table {
@@ -17,28 +41,58 @@
 
 
 //
+// Change placement of captions with a class
+//
+
+.caption-top {
+  caption-side: top;
+}
+
+//
 // Condensed table w/ half padding
 //
 
 .table-sm {
-  th,
-  td {
-    padding: $table-cell-padding-sm;
+  > :not(caption) > * > * {
+    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
   }
 }
 
+// Border versions
+//
+// Add or remove borders all around the table and between all the columns.
+//
+// When borders are added on all sides of the cells, the corners can render odd when
+// these borders do not have the same color or if they are semi-transparent.
+// Therefor we add top and border bottoms to the `tr`s and left and right borders
+// to the `td`s or `th`s
+
+.table-bordered {
+  > :not(caption) > * {
+    border-width: $table-border-width 0;
+
+    // stylelint-disable-next-line selector-max-universal
+    > * {
+      border-width: 0 $table-border-width;
+    }
+  }
+}
+
+.table-borderless {
+  // stylelint-disable-next-line selector-max-universal
+  > :not(caption) > * > * {
+    border-bottom-width: 0;
+  }
+}
 
 // Table backgrounds
 //
 // Exact selectors below required to override `.table-striped` and prevent
 // inheritance to nested tables.
 
-@each $color, $value in $theme-colors {
-  @include table-row-variant($color, theme-color-level($color, -9));
+@each $color, $value in $table-variants {
+  @include table-variant($color, $value);
 }
-
-@include table-row-variant(active, $table-active-bg);
-
 
 // Dark styles
 //

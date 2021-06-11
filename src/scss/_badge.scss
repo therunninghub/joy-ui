@@ -43,7 +43,7 @@ a.badge {
 
     // Fix light outlined badges
     @if ( $value == theme-color("light") ) {
-      color: color-yiq($value);
+      color: color-contrast($value);
     }
   }
 }

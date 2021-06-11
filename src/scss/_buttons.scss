@@ -5,36 +5,57 @@
 //
 
 .btn {
-  font-weight: $btn-font-weight;
+  display: inline-block;
   font-family: $btn-font-family;
-  border: $input-btn-border-width solid transparent;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  color: $body-color;
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  vertical-align: middle;
+  cursor: if(true, pointer, null);
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
 
   @include button-size(
     $btn-padding-y,
     $btn-padding-x,
     $btn-font-size,
-    $input-btn-line-height,
     $btn-border-radius
   );
 
   @include transition($btn-transition);
 
-  &:hover,
-  &.hover {
-    cursor: pointer;
+  &:hover{
+    color: $body-color;
+    text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  &:focus,
-  &.focus {
+  .btn-check:focus + &,
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba($component-active-bg, $input-btn-focus-color-opacity);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: $btn-disabled-opacity;
     @include box-shadow(none);
   }
-
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active {
-    background-image: none;
-    @include box-shadow(none);
-  }
-
   //
   // Class modifiers
   //
@@ -54,18 +75,18 @@
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @include button-variant($value);
+    @include button-variant($value, $value);
   }
 }
 
 // White buttons
 .btn-white {
-  @include button-variant($white);
+  @include button-variant($white, $white);
 }
 
 // Black buttons
 .btn-black {
-  @include button-variant($black);
+  @include button-variant($black, $black);
 }
 
 // Outlined default buttons
@@ -128,23 +149,11 @@
 //
 
 .btn-lg {
-  @include button-size(
-    $btn-padding-y-lg,
-    $btn-padding-x-lg,
-    $btn-font-size-lg,
-    $btn-line-height-lg,
-    $btn-border-radius-lg
-  );
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 
 .btn-sm {
-  @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x-sm,
-    $btn-font-size-sm,
-    $btn-line-height-sm,
-    $btn-border-radius-sm
-  );
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }
 
 
